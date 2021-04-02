@@ -1,0 +1,58 @@
+/*
+// .block-top features
+*/
+@import '../variables';
+@import '../mixins/breakpoints';
+
+.block-latest-jobs{
+    width: 20%;
+    .container{
+        .view-badge{
+            position: relative;
+            .tag-badge--view{
+                position: absolute;
+                top: 5px;
+                right: 0;
+            }
+        }
+        .latest-jobs{
+            background-color: map_get($theme-scheme, opposite);
+            .job-item{
+                padding: 12px;
+                .job-title{
+                    font-weight: bold;
+                    position: relative;
+                    border-bottom: .5px solid  map_get($theme-scheme, divider);
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                    }
+                }
+                .job-description{
+                    font-size: 14px;
+                    padding-top:5px;
+                    padding-bottom:5px;
+                }
+                .job-meta{
+                    font-size: 12px;
+                    color: #969292;
+                    span{
+                        &:nth-child(2){
+                            position: relative;
+                            margin-left: 15px;
+                            &:before{
+                                content: '•';
+                                position: absolute;
+                                left: -10px;
+                                font-size: 25px;
+                                line-height: 1;
+                                top: -3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+/*
+// .block-top features
+*/
+@import '../variables';
+@import '../mixins/breakpoints';
+
+.block-latest-feeds{
+    width: 50%;
+    .container{
+        .header__enquiry{
+            .enquiry{
+                .enquiry__button{
+                    background-color:  map_get($theme-scheme, main); 
+                    color:  map_get($theme-scheme, opposite);
+                    border: none;
+                    width: 100%;
+                    label{
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                    span{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+        .view-badge{
+            position: relative;
+            .tag-badge--add{
+                position: absolute;
+                top: 5px;
+                right: 0;
+            }
+        }
+        .block-latest-feeds_content{
+           .feed-container{
+               div{
+                .top-container{
+                    // width: 50%;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        border: 2px solid map_get($theme-scheme, main);
+                        object-fit: cover;
+                    }
+                    padding: 20px;
+                    .title{
+                       color: map_get($theme-scheme, main); 
+                    }
+                    .description{
+
+                    }
+                }
+                .feed-icon{
+                    cursor: pointer;
+                }
+               }
+               .feed-image{
+                   img{
+                       width: 100%;
+                   }
+               }
+           }
+        }
+    }
+}

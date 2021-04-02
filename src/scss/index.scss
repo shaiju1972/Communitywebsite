@@ -1,0 +1,115 @@
+@import '~photoswipe/dist/photoswipe';
+@import '~photoswipe/dist/default-skin/default-skin';
+@import '~slick-carousel/slick/slick';
+@import '~react-toastify/dist/ReactToastify.min';
+@import '~react-input-range/lib/css/index';
+
+@import 'bootstrap';
+@import 'style';
+
+.inline-features{
+    display: flex;
+    .top-blocks{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.feeds-container{
+    display: flex;
+    justify-content: space-between;
+}
+.title-purple{
+    color: map_get($theme-scheme, main);
+}
+.user-call-block{
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+.container.properties-list{
+    .block-gifts,.block-latest-jobs{
+        margin-top:25px;
+        padding: 8px;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+        border: none;
+        border-radius: 0;
+    }
+}
+.prop-detail.user-avatar{
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    .user-avatar-title{
+        color:map_get($theme-scheme, main);
+        font-weight: bold;
+    }
+    img{
+        height: 50px;
+        border:1px solid map_get($theme-scheme, main);
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+}
+
+
+// Properties add container
+.image-upload{
+    .select-image{
+        border: 1px dashed #268bfe;
+        background: #e5f2f7;
+        padding: 0;
+        height: 120px;
+        width: 130px;
+        font-size: 13px;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #268bfe;
+        cursor: pointer;
+        &:before{
+            content: '+';
+            position: absolute;
+            top: 15%;
+            font-size: 2em;
+            font-weight: lighter;
+        }
+    }
+}
+.form-error{
+    font-size: 12px;
+    color: map_get(map_get($alerts, danger), main);;
+}
+.editorClassName.rdw-editor-main{
+    height: 200px;
+}
+.rdw-editor-wrapper{
+    border: .5px solid lightgrey;
+}
+.image-container{
+    display: flex;
+    .properties-image{
+        &:nth-child(1n){
+            margin-right: 10px;
+        }
+        position: relative;
+        img{
+        }
+        .image-icons{
+            cursor: pointer;
+            position: absolute;
+            top: 50%; /* Position Y halfway in */
+            left: 50%; /* Position X halfway in */
+            transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
+            svg{
+                cursor: pointer;
+                
+            }
+        }
+    }
+}

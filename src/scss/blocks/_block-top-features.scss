@@ -1,0 +1,14 @@
+/*
+// .block-top features
+*/
+@import '../variables';
+@import '../mixins/breakpoints';
+
+.block-top-features{
+    width: 75%;
+    .container{
+        .block-top__features_content{
+            
+        }
+    }
+}
